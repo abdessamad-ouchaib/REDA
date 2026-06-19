@@ -1,6 +1,6 @@
 # SoukLink — Marketplace de vente entre particuliers
 
-![CI/CD](https://github.com/TON_USERNAME/souklink/actions/workflows/ci.yml/badge.svg)
+![CI/CD](https://github.com/abdessamad-ouchaib/souklink/actions/workflows/ci.yml/badge.svg)
 ![Java](https://img.shields.io/badge/Java-21-orange?logo=java)
 ![Spring Boot](https://img.shields.io/badge/Spring_Boot-3.2.5-6DB33F?logo=spring)
 ![Angular](https://img.shields.io/badge/Angular-17-DD0031?logo=angular)
