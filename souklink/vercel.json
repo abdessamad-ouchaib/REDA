@@ -1,0 +1,10 @@
+{
+  "buildCommand": "cd frontend && npm install && npm run build -- --configuration=production",
+  "outputDirectory": "frontend/dist/souklink",
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
+    }
+  ]
+}
