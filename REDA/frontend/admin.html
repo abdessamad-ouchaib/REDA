@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>لوحة تحكم المسؤول — تغذية عامة رضا</title>
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/admin.css">
+</head>
+<body class="admin-body">
+
+<!-- ===== شاشة تسجيل الدخول ===== -->
+<div id="loginScreen" class="login-wrap">
+  <div class="login-card">
+    <div class="cart-ic">🛒</div>
+    <h2>لوحة تحكم المسؤول</h2>
+    <p>تغذية عامة رضا — تسجيل الدخول للمتابعة</p>
+    <div class="login-error" id="loginError"></div>
+    <form id="loginForm">
+      <div class="form-field" style="text-align:right;">
+        <label>اسم المستخدم</label>
+        <input type="text" id="loginUser" required>
+      </div>
+      <div class="form-field" style="text-align:right;">
+        <label>كلمة المرور</label>
+        <input type="password" id="loginPass" required>
+      </div>
+      <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center;margin-top:6px;">دخول</button>
+    </form>
+    <p class="form-note" style="margin-top:18px;"><a href="index.html">⟵ العودة إلى الموقع</a></p>
+  </div>
+</div>
+
+<!-- ===== لوحة التحكم ===== -->
+<div id="dashboard" style="display:none;">
+  <div class="admin-header">
+    <div class="container">
+      <div class="admin-title">تغذية عامة رضا <small>لوحة تحكم المنتجات</small></div>
+      <button class="btn-logout" id="logoutBtn">تسجيل الخروج ⟶</button>
+    </div>
+  </div>
+
+  <div class="container" style="padding-top:30px;padding-bottom:60px;">
+    <div class="admin-grid">
+
+      <!-- ===== نموذج إضافة / تعديل منتج ===== -->
+      <div class="panel">
+        <h3 id="formTitle">➕ إضافة منتج جديد</h3>
+        <form id="productForm">
+          <input type="hidden" id="productId">
+          <div class="form-field">
+            <label>صورة المنتج (اختياري)</label>
+            <label class="img-upload" id="imgUploadLabel">
+              <img id="imgPreview" style="display:none;">
+              <span id="imgUploadText">اضغط لاختيار صورة</span>
+              <input type="file" id="productImage" accept="image/*">
+            </label>
+          </div>
+          <div class="form-field">
+            <label>اسم المنتج *</label>
+            <input type="text" id="pName" required>
+          </div>
+          <div class="form-field">
+            <label>الفئة *</label>
+            <select id="pCategory" required>
+              <option value="مواد غذائية">مواد غذائية</option>
+              <option value="منتجات الألبان">منتجات الألبان</option>
+              <option value="مواد التنظيف">مواد التنظيف</option>
+              <option value="العناية الشخصية">العناية الشخصية</option>
+              <option value="حفاضات ومستلزمات الأطفال">حفاضات ومستلزمات الأطفال</option>
+              <option value="مشروبات">مشروبات</option>
+              <option value="حلويات وبسكويت">حلويات وبسكويت</option>
+              <option value="أخرى">أخرى</option>
+            </select>
+          </div>
+          <div class="form-field">
+            <label>السعر (درهم) *</label>
+            <input type="number" id="pPrice" step="0.01" min="0" required>
+          </div>
+          <div class="form-field">
+            <label>الوحدة (كيلو، لتر، علبة...)</label>
+            <input type="text" id="pUnit" placeholder="الوحدة">
+          </div>
+          <div class="form-field">
+            <label>وصف مختصر (اختياري)</label>
+            <textarea id="pDescription"></textarea>
+          </div>
+          <div class="check-row">
+            <input type="checkbox" id="pInStock" checked>
+            <label for="pInStock">المنتج متوفر حاليًا</label>
+          </div>
+          <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center;" id="submitBtn">حفظ المنتج</button>
+          <button type="button" class="btn btn-outline" style="width:100%;justify-content:center;margin-top:10px;display:none;" id="cancelEditBtn">إلغاء التعديل</button>
+        </form>
+      </div>
+
+      <!-- ===== لائحة المنتجات ===== -->
+      <div class="panel">
+        <div class="table-toolbar">
+          <h3 style="margin:0;">📦 المنتجات (<span id="prodCount">0</span>)</h3>
+          <input type="text" id="searchInput" placeholder="ابحث عن منتج...">
+        </div>
+        <div style="overflow-x:auto;">
+          <table>
+            <thead>
+              <tr>
+                <th>صورة</th>
+                <th>الاسم</th>
+                <th>الفئة</th>
+                <th>السعر</th>
+                <th>الحالة</th>
+                <th>إجراءات</th>
+              </tr>
+            </thead>
+            <tbody id="productsTableBody"></tbody>
+          </table>
+        </div>
+        <div id="adminLoader" class="loader">⏳ جاري التحميل...</div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script src="js/config.js"></script>
+<script src="js/admin.js"></script>
+</body>
+</html>
