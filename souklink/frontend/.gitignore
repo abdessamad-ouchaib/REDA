@@ -1,7 +1,0 @@
-node_modules/
-dist/
-.angular/
-.vscode/
-.DS_Store
-*.log
-karma-test.log
