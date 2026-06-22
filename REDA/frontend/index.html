@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>تغذية عامة رضا — متجر المواد الغذائية ومستلزمات المنزل</title>
-<meta name="description" content="تغذية عامة رضا: المواد الغذائية، مشتقات الحليب، مواد التنظيف والتعبئة. تسوّق منتجاتنا واطّلع على أثمنتنا وموقعنا.">
+<title>تغذية عامة رضى — متجر المواد الغذائية ومستلزمات المنزل</title>
+<meta name="description" content="تغذية عامة رضى: المواد الغذائية، مشتقات الحليب، مواد التنظيف والتعبئة. تسوّق منتجاتنا واطّلع على أثمنتنا وموقعنا.">
 <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -13,7 +13,7 @@
   <div class="container nav-wrap">
     <a href="#home" class="brand">
       <span class="cart-ic">🛒</span>
-      <span class="brand-text">تغذية عامة رضا<small>GROCERY · SUPÉRETTE · ÉPICERIE</small></span>
+      <span class="brand-text">تغذية عامة رضى<small>GROCERY · SUPÉRETTE · ÉPICERIE</small></span>
     </a>
     <button class="nav-toggle" id="navToggle">☰</button>
     <nav class="nav-links" id="navLinks">
@@ -33,7 +33,7 @@
     <div class="reveal visible">
       <div class="hero-tag">🟢 مفتوح الآن · كل يوم</div>
       <h1>كل ما يحتاجه بيتك<br>على بُعد <span class="accent">خطوة واحدة</span></h1>
-      <p>متجر تغذية عامة رضا يوفر المواد الغذائية، مشتقات الحليب، مواد التنظيف والتعبئة وكل مستلزمات المنزل اليومية بأثمنة مناسبة وجودة تثق بها.</p>
+      <p>متجر تغذية عامة رضى يوفر المواد الغذائية، مشتقات الحليب، مواد التنظيف والتعبئة وكل مستلزمات المنزل اليومية بأثمنة مناسبة وجودة تثق بها.</p>
       <div class="hero-cta">
         <a href="#products" class="btn btn-gold">تصفح منتجاتنا</a>
         <a href="#location" class="btn btn-outline" style="border-color:#fff;color:#fff;">📍 موقعنا</a>
@@ -45,22 +45,28 @@
       </div>
     </div>
     <div class="hero-photo reveal visible">
-      <img src="images/storefront.jpg" alt="واجهة محل تغذية عامة رضا" onerror="this.parentElement.style.display='none'">
+      <img src="images/storefront.jpg" alt="واجهة محل تغذية عامة رضى" onerror="this.parentElement.style.display='none'">
     </div>
   </div>
 </section>
 
 <!-- ===== ABOUT ===== -->
 <section class="section" id="about">
-  <div class="container about-grid">
-    <div class="about-photos reveal">
-      <img src="images/shelf-1.jpg" alt="رفوف المواد الغذائية" onerror="this.style.display='none'">
-      <img src="images/shelf-2.jpg" alt="رفوف مواد التنظيف" onerror="this.style.display='none'">
-      <img src="images/shelf-3.jpg" alt="ثلاجات المشروبات ومنتجات الألبان" onerror="this.style.display='none'">
-    </div>
-    <div class="reveal">
+  <div class="container">
+    <div class="section-head reveal">
       <div class="eyebrow">من نحن</div>
       <h2 class="section-title">متجر حي بخدمة قريبة منكم</h2>
+    </div>
+    <div class="about-grid">
+    <div class="reveal" style="display:grid;grid-template-columns:1fr 1fr;gap:12px;">
+      <img src="images/shelf-1.jpg" alt="رفوف المواد الغذائية" style="border-radius:14px;box-shadow:var(--shadow);height:200px;object-fit:cover;width:100%;" onerror="this.style.display='none'">
+      <img src="images/shelf-2.jpg" alt="رفوف مواد التنظيف" style="border-radius:14px;box-shadow:var(--shadow);height:200px;object-fit:cover;width:100%;" onerror="this.style.display='none'">
+      <img src="images/shelf-3.jpg" alt="منتجات التنظيف" style="border-radius:14px;box-shadow:var(--shadow);height:200px;object-fit:cover;width:100%;" onerror="this.style.display='none'">
+      <img src="images/shelf-4.jpg" alt="ممر المتجر" style="border-radius:14px;box-shadow:var(--shadow);height:200px;object-fit:cover;width:100%;" onerror="this.style.display='none'">
+      <img src="images/shelf-5.jpg" alt="رفوف إضافية" style="border-radius:14px;box-shadow:var(--shadow);height:200px;object-fit:cover;width:100%;" onerror="this.style.display='none'">
+      <img src="images/shelf-6.jpg" alt="ثلاجات المشروبات" style="border-radius:14px;box-shadow:var(--shadow);height:200px;object-fit:cover;width:100%;" onerror="this.style.display='none'">
+    </div>
+    <div class="reveal">
       <p style="color:var(--muted);margin-top:14px;">منذ سنوات ونحن نخدم الحي بمواد غذائية طازجة، مشتقات حليب، مواد تنظيف وتعبئة بأسعار في متناول الجميع. هدفنا أن نكون أقرب نقطة بيع تثقون في جودتها وترحب بكم دائمًا.</p>
       <div class="feature-list">
         <div class="feature">
@@ -77,10 +83,9 @@
         </div>
       </div>
     </div>
-  </div>
+    </div><!-- end about-grid -->
+  </div><!-- end container -->
 </section>
-
-<!-- ===== PRODUCTS ===== -->
 <section class="section" id="products" style="background:var(--paper);">
   <div class="container">
     <div class="section-head reveal">
@@ -173,7 +178,7 @@
 <footer>
   <div class="container footer-grid">
     <div>
-      <span class="brand-text" style="color:#fff;">تغذية عامة رضا</span>
+      <span class="brand-text" style="color:#fff;">تغذية عامة رضى</span>
       <p style="margin-top:10px;font-size:0.88rem;color:#9fb0cc;">متجركم المحلي للمواد الغذائية ومستلزمات المنزل، بجودة موثوقة وأسعار في متناول الجميع.</p>
     </div>
     <div>
@@ -194,7 +199,7 @@
       </ul>
     </div>
   </div>
-  <div class="footer-bottom">© <span id="year"></span> تغذية عامة رضا. جميع الحقوق محفوظة.</div>
+  <div class="footer-bottom">© <span id="year"></span> تغذية عامة رضى. جميع الحقوق محفوظة.</div>
 </footer>
 
 <a href="admin.html" class="admin-link">🔐 دخول المسؤول</a>
